@@ -14,7 +14,7 @@ Switch($choice){
     2{playKind}
     3{playMissionImpossible}
     0{Write-Host "До скорой встречи!"; exit}
-      default {Write-Host ″Wrong choice, try again.″ -ForegroundColor Red}
+      default {Write-Host "Ошибка выбора. Попробуйте снова" -ForegroundColor Red}
   }
 
   function playStarWars{
