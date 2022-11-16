@@ -1,0 +1,72 @@
+
+IPAddress         : 192.168.1.56
+InterfaceIndex    : 3
+InterfaceAlias    : Беспроводная сеть
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 05:31:25
+PreferredLifetime : 05:31:25
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 169.254.31.151
+InterfaceIndex    : 5
+InterfaceAlias    : Сетевое подключение Bluetooth
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.1.12
+InterfaceIndex    : 16
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 169.254.233.142
+InterfaceIndex    : 16
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 169.254.7.72
+InterfaceIndex    : 7
+InterfaceAlias    : VPN - VPN Client
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 16
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Tentative
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+

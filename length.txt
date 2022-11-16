@@ -1,0 +1,75 @@
+
+    Directory: D:\.git\powershell\Vov
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:01            133 ex_three.ps1
+
+    Directory: D:\.git\powershell\Mal
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:26            153 ex_three.ps1
+
+    Directory: D:\.git\powershell\Mih
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:38            268 ex_three.ps1
+
+    Directory: D:\.git\powershell\Mal
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:04            629 ex_two.ps1
+
+    Directory: D:\.git\powershell\Vov
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:06            666 ex_two.ps1
+-a---          16.11.2022    22:06            900 ex_one.ps1
+
+    Directory: D:\.git\powershell\Mih
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:05            945 ex_one.ps1
+
+    Directory: D:\.git\powershell
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:25           2141 config.txt
+
+    Directory: D:\.git\powershell\Mih
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:05           2168 ex_two.ps1
+
+    Directory: D:\.git\powershell\Mal
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:05           2724 ex_one.ps1
+
+    Directory: D:\.git\powershell\Mih\test_ex_three
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:08           2921 3.txt
+-a---          17.11.2022     0:08           7208 2.txt
+
+    Directory: D:\.git\powershell\Mal\test_ex_two
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          16.11.2022    22:02          12369 Документ Microsoft Word.docx
+
+    Directory: D:\.git\powershell\Mih\test_ex_three
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          17.11.2022     0:07          12576 1.txt
+
