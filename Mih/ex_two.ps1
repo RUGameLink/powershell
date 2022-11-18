@@ -1,15 +1,44 @@
 #Диспетчер Задач "на минималках"
-Write-Host
-Write-Host "Меню" -BackgroundColor Black -ForegroundColor Red
-Write-Host
 
+#Отрисовываем консольное меню
+Write-Host #отступ строки (пустой)
+Write-Host "Меню" -BackgroundColor Black -ForegroundColor Red #Надпись Меню в консоли с покраской заднего фона в черный и текст в красный
+Write-Host #отступ строки (пустой)
+
+#Вторая часть меню с пунктами выбора (варианты вводимых значений с зеленым цветом текста)
 Write-Host "1. Просмотреть процессы" -ForegroundColor Green
 Write-Host "0. Выход" -ForegroundColor Green
 Write-Host
 
-$choice = Read-Host "Введите значение для работы"
+function readSubMenu {
+    $choice2 = Read-Host "Введите значение для работы"#Выводим текст о с просьбой ввода и считываем вводимое значение
+    switch ($choice2) {#Провиряем с помощью Switch введенный результат (если введено числовое значение из пункта меню - вызываем соответствующий метод. 
+        #Иначе - просим ввести корректное значение)
+        1 { #Если выбран первый пункт, то
+            $idSelect = Read-Host "Введите id процесса для просмотра" #Выводим текст о с просьбой ввода и считываем вводимое значение
+            Write-Host "-----================Загружаю информацию================-----" -ForegroundColor Green
+            get-process  -id $idSelect #Вывод информации о процессе по его id
+         }
+        2 { #Если выбран второй пункт, то
+            $idSelect = Read-Host "Введите id процесса для завершения" #Выводим текст о с просьбой ввода и считываем вводимое значение
+            Write-Host "-----================Останавливаю процесс================-----" -ForegroundColor Red
+            stop-process -id $idSelect -Confirm #Остановка процесса по его id
+            Write-Host "-----================Вывожу процессы================-----" -ForegroundColor Greed
+            get-process
+        }
+        default {
+            Write-Host "Ошибка выбора! Попробуйте еще раз!" -ForegroundColor Red
+            readSubMenu
+        }
+    }
+    
+}
 
-    Switch($choice){
+function readCommand{
+$choice = Read-Host "Введите значение для работы"#Выводим текст о с просьбой ввода и считываем вводимое значение
+
+    Switch($choice){#Провиряем с помощью Switch введенный результат (если введено числовое значение из пункта меню - вызываем соответствующий метод. 
+            #Иначе - просим ввести корректное значение)
         1{
             get-process
             Write-Host
@@ -20,25 +49,15 @@ $choice = Read-Host "Введите значение для работы"
             Write-Host "2. Завершить процесс" -ForegroundColor Green
             Write-Host "0. Выход" -ForegroundColor Green
             Write-Host
-
-            $choice2 = Read-Host "Введите значение для работы"
-            switch ($choice2) {
-                1 { 
-                    $idSelect = Read-Host "Введите id процесса для просмотра"
-                    Write-Host "-----================Загружаю информацию================-----" -ForegroundColor Green
-                    get-process  -id $idSelect
-                 }
-                2 {
-                    $idSelect = Read-Host "Введите id процесса для завершения"
-                    Write-Host "-----================Останавливаю процесс================-----" -ForegroundColor Red
-                    stop-process -id $idSelect -Confirm
-                    Write-Host "-----================Вывожу процессы================-----" -ForegroundColor Greed
-                    get-process
-                }
-                default {Write-Host "Ошибка выбора. Попробуйте снова" -ForegroundColor Red}
-            }
+            readSubMenu
+            
         }
         0{Write-Host "До скорой встречи!"; exit}
-          default {Write-Host "Ошибка выбора. Попробуйте снова" -ForegroundColor Red}
+        default {
+            Write-Host "Ошибка выбора! Попробуйте еще раз!" -ForegroundColor Red
+            readCommand
+        }
       }
-    
+}
+
+readCommand
