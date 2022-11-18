@@ -23,9 +23,10 @@ function readSubMenu {
             $idSelect = Read-Host "Введите id процесса для завершения" #Выводим текст о с просьбой ввода и считываем вводимое значение
             Write-Host "-----================Останавливаю процесс================-----" -ForegroundColor Red
             stop-process -id $idSelect -Confirm #Остановка процесса по его id
-            Write-Host "-----================Вывожу процессы================-----" -ForegroundColor Greed
+            Write-Host "-----================Вывожу процессы================-----" -ForegroundColor Green
             get-process
         }
+	0{Write-Host "До скорой встречи!"; exit}
         default {
             Write-Host "Ошибка выбора! Попробуйте еще раз!" -ForegroundColor Red
             readSubMenu
